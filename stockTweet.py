@@ -2,17 +2,20 @@ from textblob import TextBlob
 import tweepy
 import statistics
 
-consumer_key = "ptXDbfj2Knfku6S92dCd9iGXJ"
-consumer_secret = "d9Ugs1UuMMrzHay8IMJn0wFh5gJCIq3NW929ulGy3TAL1Rt5Jx"
+consumer_key = "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
+consumer_secret = "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
 
-access_token = "1189546996631330818-BUnfrfjboBlIEGM9UBntl19ksl0nBX"
-secret_token = "hTDUpOSiJrs3sG91JQgcejbaZzk3nfJegb99p6q28qSiv"
+access_token = "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
+secret_token = "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
 
 auth = tweepy.OAuthHandler(consumer_key, consumer_secret)
 auth.set_access_token(access_token, secret_token)
-candList = ['CROX','American International Group','CPB','SGEN','AAPL','ZURVY','S&P500', 'VIX','ROKU','SNAP','SKX','Crocs']
+candList = ['CROX','American International Group','CPB','SGEN','AAPL','ZURVY','S&P500', 'VIX','ROKU','SNAP','SKX','TSLA']
 d = {}
 finishedDict = {}
+
+# meanSent() searches twitter for stock, pull 3200 tweets into a list, performs sentiment analysis on each and creates a new list, finds the average sentiment from list, 
+# then adds stock ticker and average sentiment to dictionary.  Finally, dictionary is printed.
 
 def meanSent():
     pol = []
